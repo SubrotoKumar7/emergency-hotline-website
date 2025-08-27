@@ -24,24 +24,24 @@
                 </div>
             </div>
             <!-- navbar right area -->
-            <div class="flex items-center justify-between gap-3">
-                <div class="flex items-center gap-3 py-2 px-5 rounded-full bg-green-100 font-black">
-                    <span id="heart">0</span>
-                    <img class="w-7" src="assets/heart.png" alt="heart">
-                </div>
-                <div class="flex items-center gap-3 py-2 px-5 rounded-full bg-green-100 font-black">
-                    <span id="coin">100</span>
-                    <img class="w-7" src="assets/coin.png" alt="coin">
-                </div>
-                <div class="flex items-center gap-3 bg-green-500 py-2 px-5 rounded-full text-white font-bold">
-                    <span id="copy">0</span>
-                    <p>Copy</p>
-                </div>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+                    <div class="flex items-center gap-3 py-2 px-5 rounded-full bg-green-100 font-black">
+                        <span id="heart">0</span>
+                        <img class="w-7" src="assets/heart.png" alt="heart">
+                    </div>
+                    <div class="flex items-center gap-3 py-2 px-5 rounded-full bg-green-100 font-black">
+                        <span id="coin">100</span>
+                        <img class="w-7" src="assets/coin.png" alt="coin">
+                    </div>
+                    <div class="flex items-center gap-3 bg-green-500 py-2 px-5 rounded-full text-white font-bold">
+                        <span id="copy">0</span>
+                        <p>Copy</p>
+                    </div>
             </div>
         </nav>
         <!-- banner -->
-        <div class="banner bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] h-[239px]">
-            <div class="flex justify-center items-center flex-col text-white py-5">
+        <div class="banner bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] md:h-[239px]">
+            <div class="flex justify-center items-center flex-col text-white py-5 text-center">
                 <img class="mx-auto w-20 h-20" src="assets/logo-dark.png" alt="logo">
                 <h1 class="my-3 text-4xl font-bold">Emergency Service Directory</h1>
                 <p class="text-xl">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
@@ -49,8 +49,8 @@
         </div>
     </header>
 
-    <main class="w-11/12 mx-auto mt-12 mb-20 grid grid-cols-4 grid-rows-1 gap-5 items-stretch">
-        <div class="card-container col-span-3 grid grid-cols-3 gap-7 gap-y-15">
+    <main class="w-11/12 mx-auto mt-12 mb-20 flex flex-col md:flex-row gap-5">
+        <div class="card-container grid grid-cols-1 md:grid-cols-3 gap-7 md:w-9/12">
             <!-- card 1 -->
             <div class="card bg-white shadow p-8">
                 <div class="flex justify-between items-center mb-4">
@@ -243,9 +243,9 @@
 
 
         </div>
-        <aside class="col-span-1 bg-white p-6">
+        <aside class="bg-white p-3 md:w-3/12">
             <div>
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between gap-5">
                     <div class="text-xl font-semibold">
                         <i class="fa-regular fa-clock"></i>
                         Call History
@@ -257,7 +257,7 @@
                 <div id="history-container" class="my-10">
                     <div class="flex items-center justify-between bg-gray-50 rounded shadow p-3 my-3">
                         <div>
-                            <h1 class="font-semibold">Fire Service Number</h1>
+                            <h1 class="font-semibold pt-2">Fire Service Number</h1>
                             <p class="text-gray-500 my-2 text-lg">999</p>
                         </div>
                         <p class="text-lg">11:36:58 AM</p>
