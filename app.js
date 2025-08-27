@@ -24,7 +24,7 @@ cardContainer.addEventListener('click', function(event){
         let title = event.target.parentNode.parentNode.childNodes[1].innerHTML;
         let subtitle = event.target.parentNode.parentNode.childNodes[3].innerHTML;
         let number = event.target.parentNode.parentNode.childNodes[5].childNodes[1].innerHTML;
-        
+
         let date = new Date().toLocaleTimeString();
         let coinNum = Number(coin.innerHTML);
 
@@ -53,4 +53,10 @@ cardContainer.addEventListener('click', function(event){
     }
 
     
+});
+
+
+// clear call history 
+getElement('clear-btn').addEventListener('click', function(){
+    historyContainer.innerHTML = "";
 });
