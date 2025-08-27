@@ -94,3 +94,27 @@ cardContainer.addEventListener('click', function(event){
 getElement('clear-btn').addEventListener('click', function(){
     historyContainer.innerHTML = "";
 });
+
+// copy function
+cardContainer.addEventListener('click', function(event){
+    if(event.target.className.includes('copy-text')){
+        let phoneNumber = event.target.parentNode.parentNode.childNodes[5].childNodes[1].innerHTML;
+        navigator.clipboard.writeText(phoneNumber)
+        .then(function() {
+            alert("Number copy successfully");
+        })
+        .catch(err => {
+            alert("Failed to copy Number: " + err);
+        });
+    }
+    else if(event.target.className.includes('fa-copy')){
+        let phoneNum = event.target.parentNode.parentNode.parentNode.childNodes[5].childNodes[1].innerHTML;
+        navigator.clipboard.writeText(phoneNum)
+        .then(function() {
+        alert("Number copy successfully");
+        })
+        .catch(err => {
+        alert("Failed to copy Number: " + err);
+        });
+    }
+})
