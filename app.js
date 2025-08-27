@@ -102,6 +102,9 @@ cardContainer.addEventListener('click', function(event){
         navigator.clipboard.writeText(phoneNumber)
         .then(function() {
             alert("Number copy successfully");
+            let copyText = Number(copy.innerHTML);
+            let totalCopy = copyText + 1;
+            copy.innerHTML = totalCopy;
         })
         .catch(err => {
             alert("Failed to copy Number: " + err);
@@ -111,7 +114,10 @@ cardContainer.addEventListener('click', function(event){
         let phoneNum = event.target.parentNode.parentNode.parentNode.childNodes[5].childNodes[1].innerHTML;
         navigator.clipboard.writeText(phoneNum)
         .then(function() {
-        alert("Number copy successfully");
+            alert("Number copy successfully");
+            let copyText = Number(copy.innerHTML);
+            let totalCopy = copyText + 1;
+            copy.innerHTML = totalCopy;
         })
         .catch(err => {
         alert("Failed to copy Number: " + err);
