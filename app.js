@@ -15,8 +15,20 @@ const historyContainer = getElement('history-container');
 
 cardContainer.addEventListener('click', function(event){
     if(event.target.className.includes('fa-heart')){
+        let favoriteServices = 0;
+        let status = event.target;
+        if(status.classList.contains('fa-regular')){
+            status.classList.remove("fa-regular");
+            status.classList.add("fa-solid", "text-red-500");
+            favoriteServices++;
+        }
+        else{
+            status.classList.remove("fa-solid", "text-red-500");
+            status.classList.add("fa-regular");
+            favoriteServices--;
+        }
         let heartNum = Number(heart.innerHTML);
-        let totalHeart = heartNum + 1;
+        let totalHeart = heartNum + favoriteServices;;
         heart.innerHTML = totalHeart;
     }
 
